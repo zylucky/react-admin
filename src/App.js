@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter } from "react-router-dom";
+import Router from "@/routers/index";
+import { ConfigProvider } from "antd";
+// import useTheme from "@/hooks/useTheme";
+// import { useSelector } from "react-redux";
+// import { theme } from "antd";
 
 function App() {
+  // const { themeConfig } = useSelector((state) => state.global);
+  // 全局使用主题
+	// useTheme(themeConfig);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <ConfigProvider>
+        <Router />
+      </ConfigProvider>
+    </HashRouter>
   );
 }
 
