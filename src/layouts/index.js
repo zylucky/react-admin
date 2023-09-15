@@ -5,6 +5,7 @@
 import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
 import LayoutMenu from "@/layouts/components/Menu";
+import LayoutFooter from "./components/Footer";
 import { useSelector } from "react-redux";
 import "./index.less";
 
@@ -22,6 +23,7 @@ const LayoutIndex = () => {
         <Content>
           <Outlet />
         </Content>
+        <LayoutFooter></LayoutFooter>
       </Layout>
     </Layout>
   )
