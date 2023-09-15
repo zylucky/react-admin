@@ -1,5 +1,5 @@
 import welcome from "@/assets/images/welcome01.png";
-import style from "./index.module.scss";
+import style from "./index.module.less";
 
 const Home = () => {
 	return (

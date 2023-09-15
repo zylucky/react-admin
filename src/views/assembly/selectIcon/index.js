@@ -1,5 +1,3 @@
-import "./index.module.scss";
-
 const SelectIcon = () => {
 	return (
 		<div className="card content-box">

@@ -6,7 +6,7 @@ import { getMenuList } from "@/api/modules/login";
 import { useDispatch, useSelector } from "react-redux";
 import * as Icons from "@ant-design/icons";
 import Logo from "./components/Logo";
-import "./index.scss";
+import "./index.less";
 
 const LayoutMenu = (props) => {
 	const dispatch = useDispatch();

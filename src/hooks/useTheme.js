@@ -1,5 +1,5 @@
-import defaultTheme from '@/styles/theme/theme-default.scss';
-import darkTheme from '@/styles/theme/theme-dark.scss';
+import defaultTheme from '@/styles/theme/theme-default.less';
+import darkTheme from '@/styles/theme/theme-dark.less';
 
 /**
  * @description 全局主题设置

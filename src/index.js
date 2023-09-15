@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // 全局配置初始化 css 文件
 import "reset-css";
-import "@/styles/common.scss";
+import "@/styles/common.less";
 import { Provider } from "react-redux";
 import store from '@/store';
 import App from './App';

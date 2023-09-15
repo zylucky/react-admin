@@ -1,5 +1,5 @@
 import { Spin } from "antd";
-import "./index.scss";
+import "./index.less";
 
 const Loading = ({ tip = "Loading" }) => {
 	return <Spin tip={tip} size="large" className="request-loading"><></></Spin>;

@@ -1,5 +1,3 @@
-import "./index.module.scss";
-
 const BatchImport = () => {
 	return (
 		<div className="card content-box">
