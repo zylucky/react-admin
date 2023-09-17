@@ -1,14 +1,12 @@
 import { HashRouter } from "react-router-dom";
 import Router from "@/routers/index";
-import { ConfigProvider, theme } from "antd";
+import { ConfigProvider, theme, App as Apps } from "antd";
 import { useSelector } from "react-redux";
+import "./index.less";
 
 function App() {
 	const { themeConfig } = useSelector(state => state.global);
 	console.log(themeConfig);
-
-	// const algorithm = [theme.darkTheme, theme.compactTheme];
-	console.log(theme);
 
 	return (
 		<HashRouter>
@@ -21,7 +19,10 @@ function App() {
 					// algorithm: [theme.darkAlgorithm, theme.compactAlgorithm],
 				}}
 			>
-				<Router />
+				{/* App 组件通过 Context 提供上下文方法调用 */}
+				<Apps className="app-main">
+					<Router />
+				</Apps>
 			</ConfigProvider>
 		</HashRouter>
 	);

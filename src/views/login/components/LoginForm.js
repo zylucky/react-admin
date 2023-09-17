@@ -1,6 +1,6 @@
 import md5 from "js-md5";
 import { useState } from "react";
-import { Button, Form, Input, message } from "antd";
+import { Button, Form, Input, App } from "antd";
 import { UserOutlined, LockOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { HOME_URL } from "@/config/config";
@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { loginApi } from "@/api/modules/login";
 
 const LoginForm = () => {
+	const { message } = App.useApp();
 	const navigate = useNavigate();
 	const [form] = Form.useForm();
 	const [loading, setLoading] = useState(false);
