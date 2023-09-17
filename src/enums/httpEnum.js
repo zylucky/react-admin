@@ -8,7 +8,7 @@ export const ResultEnum = {
 	OVERDUE: 599,
 	TIMEOUT: 10000,
 	TYPE: "success"
-}
+};
 
 /**
  * @description：请求方法
@@ -19,7 +19,7 @@ export const RequestEnum = {
 	PATCH: "PATCH",
 	PUT: "PUT",
 	DELETE: "DELETE"
-}
+};
 
 /**
  * @description：常用的contentTyp类型
@@ -33,4 +33,4 @@ export const ContentTypeEnum = {
 	FORM_URLENCODED: "application/x-www-form-urlencoded;charset=UTF-8",
 	// form-data 上传
 	FORM_DATA: "multipart/form-data;charset=UTF-8"
-}
+};

@@ -1,10 +1,10 @@
-import defaultTheme from '@/styles/theme/theme-default.less';
-import darkTheme from '@/styles/theme/theme-dark.less';
+import defaultTheme from "@/styles/theme/theme-default.less";
+import darkTheme from "@/styles/theme/theme-dark.less";
 
 /**
  * @description 全局主题设置
  * */
-const useTheme = (themeConfig) => {
+const useTheme = themeConfig => {
 	const { weakOrGray, isDark } = themeConfig;
 
 	const initTheme = () => {

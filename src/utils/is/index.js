@@ -17,17 +17,17 @@ export function isFunction(val) {
 /**
  * @description: 是否已定义
  */
-export const isDef = (val) => {
+export const isDef = val => {
 	return typeof val !== "undefined";
 };
 
-export const isUnDef = (val) => {
+export const isUnDef = val => {
 	return !isDef(val);
 };
 /**
  * @description: 是否为对象
  */
-export const isObject = (val) => {
+export const isObject = val => {
 	return val !== null && is(val, "Object");
 };
 
@@ -90,11 +90,11 @@ export const isClient = () => {
 /**
  * @description: 是否为浏览器
  */
-export const isWindow = (val) => {
+export const isWindow = val => {
 	return typeof window !== "undefined" && is(val, "Window");
 };
 
-export const isElement = (val) => {
+export const isElement = val => {
 	return isObject(val) && !!val.tagName;
 };
 

@@ -5,13 +5,13 @@ import { ResultEnum } from "@/enums/httpEnum";
 import { checkStatus } from "./helper/checkStatus";
 import { AxiosCanceler } from "./helper/axiosCancel";
 import { message } from "antd";
-import store from '../store';
+import store from "../store";
 
 const axiosCanceler = new AxiosCanceler();
 console.log(process.env.NODE_ENV);
 const config = {
 	// 默认地址请求地址，可在 .env 开头文件中修改
-	baseURL: '/api',
+	baseURL: "/api",
 	// 设置超时时间（10s）
 	timeout: 10000,
 	// 跨域时候允许携带凭证
@@ -30,7 +30,7 @@ class RequestHttp {
 		 * token校验(JWT) : 接受服务器返回的token,存储到redux/本地储存当中
 		 */
 		this.service.interceptors.request.use(
-			(config) => {
+			config => {
 				NProgress.start();
 				// * 将当前请求添加到 pending 中
 				axiosCanceler.addPending(config);
@@ -39,7 +39,7 @@ class RequestHttp {
 				const token = store.getState().global.token;
 				return { ...config, headers: { ...config.headers, "x-access-token": token } };
 			},
-			(error) => {
+			error => {
 				return Promise.reject(error);
 			}
 		);
@@ -49,7 +49,7 @@ class RequestHttp {
 		 *  服务器换返回信息 -> [拦截统一处理] -> 客户端JS获取到信息
 		 */
 		this.service.interceptors.response.use(
-			(response) => {
+			response => {
 				const { data, config } = response;
 				NProgress.done();
 				// * 在请求结束后，移除本次请求(关闭loading)
@@ -57,10 +57,10 @@ class RequestHttp {
 				tryHideFullScreenLoading();
 				// * 登录失效（code == 599）
 				if (data.code === ResultEnum.OVERDUE) {
-          store.dispatch({
-						type: 'global/setToken',
+					store.dispatch({
+						type: "global/setToken",
 						payload: {
-							token: ''
+							token: ""
 						}
 					});
 					message.error(data.msg);
@@ -75,7 +75,7 @@ class RequestHttp {
 				// * 成功请求（在页面上除非特殊情况，否则不用处理失败逻辑）
 				return data;
 			},
-			async (error) => {
+			async error => {
 				const { response } = error;
 				NProgress.done();
 				tryHideFullScreenLoading();

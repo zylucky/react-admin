@@ -6,7 +6,7 @@ import qs from "qs";
 let pendingMap = new Map();
 
 // * 序列化参数
-export const getPendingUrl = (config) =>
+export const getPendingUrl = config =>
 	[config.method, config.url, qs.stringify(config.data), qs.stringify(config.params)].join("&");
 
 export class AxiosCanceler {

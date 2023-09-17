@@ -8,9 +8,9 @@ import * as Icons from "@ant-design/icons";
 import Logo from "./components/Logo";
 import "./index.less";
 
-const LayoutMenu = (props) => {
+const LayoutMenu = () => {
 	const dispatch = useDispatch();
-	const { isCollapse } = useSelector((state) => state.menu);
+	const { isCollapse, menuList: menuListStore } = useSelector(state => state.menu);
 	const { pathname } = useLocation();
 	const [selectedKeys, setSelectedKeys] = useState([pathname]);
 	const [openKeys, setOpenKeys] = useState([]);
@@ -25,19 +25,14 @@ const LayoutMenu = (props) => {
 	}, [pathname, isCollapse]);
 
 	// 设置当前展开的 subMenu
-	const onOpenChange = (openKeys) => {
+	const onOpenChange = openKeys => {
 		if (openKeys.length === 0 || openKeys.length === 1) return setOpenKeys(openKeys);
 		const latestOpenKey = openKeys[openKeys.length - 1];
 		if (latestOpenKey.includes(openKeys[0])) return setOpenKeys(openKeys);
 		setOpenKeys([latestOpenKey]);
 	};
 
-	const getItem = (
-		label,
-		key,
-		icon,
-		children
-	) => {
+	const getItem = (label, key, icon, children) => {
 		return {
 			label,
 			key,
@@ -49,13 +44,13 @@ const LayoutMenu = (props) => {
 	// 动态渲染 Icon 图标
 	const customIcons = Icons;
 	// console.log(React.createElement(customIcons['AppstoreOutlined']))
-	const addIcon = (name) => {
+	const addIcon = name => {
 		return React.createElement(customIcons[name]);
 	};
 
 	// 处理后台返回菜单 key 值为 antd 菜单需要的 key 值
 	const deepLoopFloat = (menuList, newArr = []) => {
-		menuList.forEach((item) => {
+		menuList.forEach(item => {
 			// 下面判断代码解释 *** !item?.children?.length   ==>   (!item.children || item.children.length === 0)
 			if (!item?.children?.length) return newArr.push(getItem(item.title, item.path, addIcon(item.icon)));
 			newArr.push(getItem(item.title, item.path, addIcon(item.icon), deepLoopFloat(item.children)));
@@ -71,11 +66,11 @@ const LayoutMenu = (props) => {
 		try {
 			const { data } = await getMenuList();
 			if (!data) return;
-			
+
 			setMenuList(deepLoopFloat(data));
 			// 存储处理过后的所有面包屑导航栏到 redux 中
 			dispatch({
-				type: 'breadcrumb/setBreadcrumbList',
+				type: "breadcrumb/setBreadcrumbList",
 				payload: {
 					breadcrumbList: findAllBreadcrumb(data)
 				}
@@ -83,13 +78,13 @@ const LayoutMenu = (props) => {
 			// 把路由菜单处理成一维数组，存储到 redux 中，做菜单权限判断
 			const dynamicRouter = handleRouter(data);
 			dispatch({
-				type: 'auth/setAuthRouter',
+				type: "auth/setAuthRouter",
 				payload: {
 					authRouter: dynamicRouter
 				}
 			});
 			dispatch({
-				type: 'menu/setMenuListAction',
+				type: "menu/setMenuListAction",
 				payload: {
 					menuList: data
 				}
@@ -100,13 +95,12 @@ const LayoutMenu = (props) => {
 	};
 	useEffect(() => {
 		getMenuData();
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// 点击当前菜单跳转页面
 	const navigate = useNavigate();
 	const clickMenu = ({ key }) => {
-		const route = searchRoute(key, props.menuList);
+		const route = searchRoute(key, menuListStore);
 		if (route.isLink) window.open(route.isLink, "_blank");
 		navigate(key);
 	};

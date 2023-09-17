@@ -3,7 +3,7 @@
  * @param {String} key Storage名称
  * @return string
  */
-export const localGet = (key) => {
+export const localGet = key => {
 	const value = window.localStorage.getItem(key);
 	try {
 		return JSON.parse(window.localStorage.getItem(key));
@@ -27,7 +27,7 @@ export const localSet = (key, value) => {
  * @param {String} key Storage名称
  * @return void
  */
-export const localRemove = (key) => {
+export const localRemove = key => {
 	window.localStorage.removeItem(key);
 };
 
@@ -59,7 +59,7 @@ export const getBrowserLang = () => {
  * @param {String} path 当前访问地址
  * @returns array
  */
-export const getOpenKeys = (path) => {
+export const getOpenKeys = path => {
 	let newStr = "";
 	let newArr = [];
 	let arr = path.split("/").map(i => "/" + i);
@@ -97,7 +97,7 @@ export const searchRoute = (path, routes = []) => {
 export const getBreadcrumbList = (path, menuList) => {
 	let tempPath = [];
 	try {
-		const getNodePath = (node) => {
+		const getNodePath = node => {
 			tempPath.push(node);
 			// 找到符合条件的节点，通过throw终止掉递归
 			if (node.path === path) {
@@ -127,9 +127,9 @@ export const getBreadcrumbList = (path, menuList) => {
  * @param {String} menuList 当前菜单列表
  * @returns object
  */
-export const findAllBreadcrumb = (menuList) => {
+export const findAllBreadcrumb = menuList => {
 	let handleBreadcrumbList = {};
-	const loop = (menuItem) => {
+	const loop = menuItem => {
 		// 下面判断代码解释 *** !item?.children?.length   ==>   (item.children && item.children.length > 0)
 		if (menuItem?.children?.length) menuItem.children.forEach(item => loop(item));
 		else handleBreadcrumbList[menuItem.path] = getBreadcrumbList(menuItem.path, menuList);
@@ -145,7 +145,7 @@ export const findAllBreadcrumb = (menuList) => {
  * @return array
  */
 export function handleRouter(routerList, newArr = []) {
-	routerList.forEach((item) => {
+	routerList.forEach(item => {
 		typeof item === "object" && item.path && newArr.push(item.path);
 		item.children && item.children.length && handleRouter(item.children, newArr);
 	});
@@ -157,7 +157,7 @@ export function handleRouter(routerList, newArr = []) {
  * @param {Any} val 需要判断类型的数据
  * @return string
  */
-export const isType = (val) => {
+export const isType = val => {
 	if (val === null) return "null";
 	if (typeof val !== "object") return typeof val;
 	else return Object.prototype.toString.call(val).slice(8, -1).toLocaleLowerCase();
@@ -168,7 +168,7 @@ export const isType = (val) => {
  * @param {Object} obj 源对象
  * @return object
  */
-export const deepCopy = (obj) => {
+export const deepCopy = obj => {
 	let newObj;
 	try {
 		newObj = obj.push ? [] : {};

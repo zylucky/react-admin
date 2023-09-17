@@ -1,11 +1,11 @@
 import { Navigate, useRoutes } from "react-router-dom";
-import models from './loader';
+import models from "./loader";
 import Login from "@/views/login/index";
 
 // * 处理路由
 export const routerArray = [];
 Object.keys(models).forEach(item => {
-	Object.keys(models[item]).forEach((key) => {
+	Object.keys(models[item]).forEach(key => {
 		routerArray.push(models[item][key]);
 	});
 });

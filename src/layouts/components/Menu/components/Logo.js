@@ -2,7 +2,7 @@ import logo from "@/assets/images/logo.png";
 import { useSelector } from "react-redux";
 
 const Logo = () => {
-	const { isCollapse } = useSelector((state) => state.menu);
+	const { isCollapse } = useSelector(state => state.menu);
 
 	return (
 		<div className="logo-box">

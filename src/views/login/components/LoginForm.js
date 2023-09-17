@@ -13,20 +13,20 @@ const LoginForm = () => {
 	const [loading, setLoading] = useState(false);
 	const dispatch = useDispatch();
 
-  // 登录
-	const onFinish = async (loginForm) => {
+	// 登录
+	const onFinish = async loginForm => {
 		try {
 			setLoading(true);
 			loginForm.password = md5(loginForm.password);
 			const { data } = await loginApi(loginForm);
 			dispatch({
-				type: 'global/setToken',
+				type: "global/setToken",
 				payload: {
 					token: data?.access_token
 				}
 			});
 			dispatch({
-				type: 'tabs/setTabsList',
+				type: "tabs/setTabsList",
 				payload: {
 					tabsList: []
 				}
@@ -38,7 +38,7 @@ const LoginForm = () => {
 		}
 	};
 
-  const onFinishFailed = (errorInfo) => {
+	const onFinishFailed = errorInfo => {
 		console.log("Failed:", errorInfo);
 	};
 
@@ -74,6 +74,6 @@ const LoginForm = () => {
 			</Form.Item>
 		</Form>
 	);
-}
+};
 
 export default LoginForm;

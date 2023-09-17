@@ -33,7 +33,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:eslint": "eslint --fix --ext .js ./src",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,css,less,scss,html,md}\""
   },
   "eslintConfig": {
     "extends": [
@@ -57,7 +59,13 @@
     "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.15",
     "craco-less": "^3.0.1",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "less": "^4.2.0",
-    "less-loader": "^6.0.0"
+    "less-loader": "^6.0.0",
+    "prettier": "3.0.3",
+    "prettier-eslint": "^15.0.1"
   }
 }

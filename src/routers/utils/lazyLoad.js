@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Spin } from "antd";
 
 /**
@@ -6,23 +6,25 @@ import { Spin } from "antd";
  * @param {Element} Comp 需要访问的组件
  * @returns element
  */
-const lazyLoad = (Comp) => {
-  const LazyCom = lazy(Comp);
-  return (
-    <Suspense fallback={
-      <Spin
-        size="large"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100%"
-        }}
-      />
-    }>
-      <LazyCom />
-    </Suspense>
-  );
+const lazyLoad = Comp => {
+	const LazyCom = lazy(Comp);
+	return (
+		<Suspense
+			fallback={
+				<Spin
+					size="large"
+					style={{
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						height: "100%"
+					}}
+				/>
+			}
+		>
+			<LazyCom />
+		</Suspense>
+	);
 };
 
 export default lazyLoad;

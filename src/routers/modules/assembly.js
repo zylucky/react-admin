@@ -1,4 +1,3 @@
-import React from "react";
 import lazyLoad from "@/routers/utils/lazyLoad";
 import { LayoutIndex } from "@/routers/constant";
 
