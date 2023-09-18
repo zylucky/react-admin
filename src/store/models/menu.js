@@ -23,6 +23,10 @@ const menu = {
 		async getMenuListAction() {
 			const { data = [] } = await getMenuList();
 			this.setStates({ menuList: data });
+		},
+		// * updateCollapse
+		async updateCollapse({ isCollapse }) {
+			this.setStates({ isCollapse });
 		}
 	})
 };
