@@ -1,8 +1,6 @@
 import { Layout } from "antd";
 import CollapseIcon from "./components/CollapseIcon";
 import "./index.less";
-import style from "./index.less";
-console.log(style);
 
 const LayoutHeader = () => {
 	const { Header } = Layout;

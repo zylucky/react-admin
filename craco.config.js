@@ -43,5 +43,8 @@ module.exports = {
 		alias: {
 			"@": path.join(__dirname, "src")
 		}
+	},
+	babel: {
+		plugins: [["@babel/plugin-proposal-decorators", { legacy: true }]]
 	}
 };
