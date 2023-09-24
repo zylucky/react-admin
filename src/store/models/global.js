@@ -9,6 +9,8 @@ const global = {
 		assemblySize: "middle",
 		language: "",
 		themeConfig: {
+			// 控制主题 theme-default（默认） theme-dark（暗黑）
+			prefixCls: "theme-default",
 			// 默认 primary 主题颜色
 			primary: "#1890ff",
 			// 深色模式
@@ -32,6 +34,9 @@ const global = {
 		// 异步
 		async setToken({ token }) {
 			this.setStates({ token });
+		},
+		async setThemeConfig({ themeConfig }) {
+			this.setStates({ themeConfig });
 		}
 	})
 };

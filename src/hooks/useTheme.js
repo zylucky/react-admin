@@ -1,11 +1,11 @@
-import defaultTheme from "@/styles/theme/theme-default.less";
-import darkTheme from "@/styles/theme/theme-dark.less";
+import "@/styles/theme/theme-default.less";
+import "@/styles/theme/theme-dark.less";
 
 /**
  * @description 全局主题设置
  * */
 const useTheme = themeConfig => {
-	const { weakOrGray, isDark } = themeConfig;
+	const { weakOrGray } = themeConfig;
 
 	const initTheme = () => {
 		// 灰色和弱色切换
@@ -15,17 +15,6 @@ const useTheme = themeConfig => {
 		if (weakOrGray === "gray") body.setAttribute("style", "filter: grayscale(1)");
 
 		// 切换暗黑模式
-		let head = document.getElementsByTagName("head")[0];
-		const getStyle = head.getElementsByTagName("style");
-		if (getStyle.length > 0) {
-			for (let i = 0, l = getStyle.length; i < l; i++) {
-				if (getStyle[i]?.getAttribute("data-type") === "dark") getStyle[i].remove();
-			}
-		}
-		let styleDom = document.createElement("style");
-		styleDom.dataset.type = "dark";
-		styleDom.innerHTML = isDark ? darkTheme : defaultTheme;
-		head.appendChild(styleDom);
 	};
 	initTheme();
 
