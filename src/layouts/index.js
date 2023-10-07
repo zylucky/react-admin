@@ -15,8 +15,8 @@ const LayoutIndex = () => {
 	const { isCollapse } = useSelector(state => state.menu);
 
 	return (
-		// 这里不用 Layout 组件原因是切换页面时样式会先错乱然后在正常显示，造成页面闪屏效果
-		<Layout className="container">
+		// 这里不用 Layout(section) 组件原因是切换页面时样式会先错乱然后在正常显示，造成页面闪屏效果
+		<section className="container">
 			<Sider trigger={null} collapsed={isCollapse} width={220} theme="dark">
 				<LayoutMenu></LayoutMenu>
 			</Sider>
@@ -27,7 +27,7 @@ const LayoutIndex = () => {
 				</Content>
 				<LayoutFooter></LayoutFooter>
 			</Layout>
-		</Layout>
+		</section>
 	);
 };
 
