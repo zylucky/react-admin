@@ -36,6 +36,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "build:dev": "cross-env REACT_APP_ENV=development craco build",
+    "build:prod": "cross-env REACT_APP_ENV=production craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "lint:eslint": "eslint --fix --ext .js ./src",
@@ -65,6 +67,7 @@
     "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.15",
     "craco-less": "^3.0.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",

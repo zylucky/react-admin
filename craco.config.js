@@ -12,7 +12,7 @@ module.exports = {
 				target: "https://www.fastmock.site/mock/8729e12a62b4523b69c26300a6b06005",
 				changeOrigin: true,
 				pathRewrite: {
-					"^/api": "/api"
+					"^/api": "/"
 				}
 			}
 		}

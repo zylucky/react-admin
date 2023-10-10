@@ -8,10 +8,10 @@ import { message } from "antd";
 import store from "../store";
 
 const axiosCanceler = new AxiosCanceler();
-console.log(process.env.NODE_ENV);
+// console.log(process.env.REACT_APP_API_URL);
 const config = {
 	// 默认地址请求地址，可在 .env 开头文件中修改
-	baseURL: "/api",
+	baseURL: process.env.REACT_APP_API_URL,
 	// 设置超时时间（10s）
 	timeout: 10000,
 	// 跨域时候允许携带凭证
