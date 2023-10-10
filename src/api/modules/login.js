@@ -13,6 +13,11 @@ export const loginApi = params => {
 	// return http.post(PORT1 + `/login`, params, { headers: { noLoading: true } }); // 控制当前请求不显示 loading
 };
 
+// * 获取按钮权限
+export const getAuthorButtons = () => {
+	return http.get(PORT1 + `/auth/buttons`);
+};
+
 // * 获取菜单列表
 export const getMenuList = () => {
 	return http.get(PORT1 + `/menu/list`);

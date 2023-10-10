@@ -6,7 +6,6 @@ const SwitchDark = () => {
 	const dispatch = useDispatch();
 	const { themeConfig } = useSelector(state => state.global);
 	const onChange = checked => {
-		console.log(checked);
 		dispatch({
 			type: "global/setThemeConfig",
 			payload: {

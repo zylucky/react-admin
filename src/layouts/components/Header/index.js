@@ -1,6 +1,8 @@
 import { Layout } from "antd";
 import CollapseIcon from "./components/CollapseIcon";
+import BreadcrumbNav from "./components/BreadcrumbNav";
 import AvatarIcon from "./components/AvatarIcon";
+import Theme from "./components/Theme";
 import Fullscreen from "./components/Fullscreen";
 import "./index.less";
 
@@ -10,8 +12,10 @@ const LayoutHeader = () => {
 		<Header>
 			<div className="header-lf">
 				<CollapseIcon />
+				<BreadcrumbNav />
 			</div>
 			<div className="header-ri">
+				<Theme />
 				<Fullscreen />
 				<span className="username">Hooks</span>
 				<AvatarIcon />
