@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/885.510cc16e.chunk.css","mappings":"AAAA,YAEC,kBACD","sources":["views/proTable/useHooks/index.less"],"sourcesContent":[".date,\n.auth {\n\tmargin-bottom: 20px;\n}\n\n@primary-color: #1890ff;"],"names":[],"sourceRoot":""}
