@@ -13,7 +13,7 @@ const persistConfig = {
 		setItem: setAsync,
 		removeItem: removeAsync
 	}, // 使用 localStorage 进行存储
-	whitelist: ["global", "menu"] // 需要持久化存储的 model
+	whitelist: ["auth", "breadcrumb", "global", "menu", "tabs"] // 需要持久化存储的 model
 };
 
 const configureStore = () => {

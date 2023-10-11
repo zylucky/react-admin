@@ -8,6 +8,7 @@ import { Layout } from "antd";
 import { getAuthorButtons } from "@/api/modules/login";
 import LayoutMenu from "@/layouts/components/Menu";
 import LayoutHeader from "./components/Header";
+import LayoutTabs from "./components/Tabs";
 import LayoutFooter from "./components/Footer";
 import { useSelector, useDispatch } from "react-redux";
 import "./index.less";
@@ -62,6 +63,7 @@ const LayoutIndex = () => {
 			</Sider>
 			<Layout>
 				<LayoutHeader></LayoutHeader>
+				<LayoutTabs></LayoutTabs>
 				<Content>
 					<Outlet />
 				</Content>
