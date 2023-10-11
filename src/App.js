@@ -1,4 +1,5 @@
 import { HashRouter } from "react-router-dom";
+import AuthRouter from "@/routers/utils/authRouter";
 import Router from "@/routers/index";
 import { ConfigProvider, theme, App as Apps } from "antd";
 import { useSelector } from "react-redux";
@@ -19,7 +20,9 @@ function App() {
 			>
 				{/* App 组件通过 Context 提供上下文方法调用 */}
 				<Apps className={`app-main ${themeConfig.prefixCls}`}>
-					<Router />
+					<AuthRouter>
+						<Router />
+					</AuthRouter>
 				</Apps>
 			</ConfigProvider>
 		</HashRouter>
