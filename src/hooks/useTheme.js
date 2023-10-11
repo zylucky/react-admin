@@ -24,8 +24,10 @@ const useTheme = themeConfig => {
 		}
 		let styleDom = document.createElement("style");
 		styleDom.dataset.type = "dark";
-		const darkThemeStyle = "body {background-color: #141414 !important;color: rgba(255, 255, 255, .85);}";
-		const defaultThemeStyle = "body {background-color: #ffffff !important;color: rgba(0, 0, 0, .85);}";
+		const darkThemeStyle =
+			"body{background-color: #141414;color: rgba(255, 255, 255, .85);}#driver-highlighted-element-stage{background-color: #525457 !important;}";
+		const defaultThemeStyle =
+			"body{background-color: #ffffff;color: rgba(0, 0, 0, .85);}#driver-highlighted-element-stage{background-color: #ffffff !important}";
 		styleDom.innerHTML = isDark ? darkThemeStyle : defaultThemeStyle;
 		head.appendChild(styleDom);
 	};

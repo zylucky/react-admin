@@ -20,8 +20,9 @@ const LayoutIndex = () => {
 	// 获取按钮权限列表
 	const getAuthButtonsList = async () => {
 		const { data } = await getAuthorButtons();
+		// 设置按钮权限
 		dispatch({
-			type: "menu/setAuthButtons",
+			type: "auth/setAuthButtons",
 			payload: {
 				authButtons: data
 			}
