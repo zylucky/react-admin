@@ -68,6 +68,7 @@ const LayoutTabs = () => {
 			{!themeConfig.tabs && (
 				<div className="tabs">
 					<Tabs
+						crossOrigin="anonymous"
 						animated
 						activeKey={activeValue}
 						onChange={clickTabs}
