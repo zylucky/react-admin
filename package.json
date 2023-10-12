@@ -34,6 +34,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "serve": "craco start",
     "start": "craco start",
     "build": "craco build",
     "build:dev": "cross-env REACT_APP_ENV=development craco build",
