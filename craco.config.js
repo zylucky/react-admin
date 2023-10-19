@@ -9,7 +9,7 @@ module.exports = {
 		port: 3000,
 		proxy: {
 			"/api": {
-				target: "https://www.fastmock.site/mock/8729e12a62b4523b69c26300a6b06005",
+				target: "https://mock.mengxuegu.com/mock/6530e1a482cf79200957672e",
 				changeOrigin: true,
 				pathRewrite: {
 					"^/api": "/"
