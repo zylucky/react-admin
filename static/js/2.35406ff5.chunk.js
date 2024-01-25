@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_admin=self.webpackChunkreact_admin||[]).push([[2],{4002:function(a,e,c){c.r(e);var n=c(6223);e.default=function(){return(0,n.jsx)("div",{className:"card content-box",children:(0,n.jsx)("span",{className:"text",children:"BatchImport \ud83c\udf53\ud83c\udf47\ud83c\udf48\ud83c\udf49"})})}}}]);
+//# sourceMappingURL=2.35406ff5.chunk.js.map
