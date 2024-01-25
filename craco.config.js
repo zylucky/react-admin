@@ -1,6 +1,7 @@
 const path = require("path");
 const CracoLessPlugin = require("craco-less");
 const autoprefixer = require("autoprefixer");
+const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = {
 	//配置代理解决跨域
@@ -42,6 +43,23 @@ module.exports = {
 		//@符号作为src文件
 		alias: {
 			"@": path.join(__dirname, "src")
+		},
+		configure: webpackConfig => {
+			webpackConfig.module.rules[1].oneOf = [
+				...[
+					{
+						test: /.svg$/,
+						// 存放svg的文件夹
+						include: resolve("./src/assets/svg"),
+						use: [
+							{ loader: "svg-sprite-loader", options: {} },
+							{ loader: "svgo-loader", options: { symbolId: "icon-[name]" } }
+						]
+					}
+				],
+				...webpackConfig.module.rules[1].oneOf
+			];
+			return webpackConfig;
 		}
 	},
 	babel: {
