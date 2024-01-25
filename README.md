@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# React-Admin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 介绍
 
-## Available Scripts
+React Admin，基于 React18、React-Router v6、React-Hooks、Rematch、TypeScript、Vite2、Ant-Design 开源的一套后台管理系统。
 
-In the project directory, you can run:
+### 一、在线预览地址 👀
 
-### `npm start`
+- Link：https://zylucky.gitee.io/react-admin
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 二、Git 仓库地址 (欢迎 Star⭐)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Gitee：https://gitee.com/zylucky/react-admin.git
 
-### `npm test`
+### 三、🔨🔨🔨 项目功能
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🚀 采用最新技术找开发：React18、React-Router v6、React-Hooks
+- 🚀 采用 webpack 作为项目开发
+- 🚀 使用 rematch 做状态管理
+- 🚀 对 Axios 二次封装 （错误拦截、常用请求封装、全局请求 Loading、取消重复请求…）
+- 🚀 支持 Antd 组件大小切换、暗黑 && 灰色 && 色弱模式、i18n 国际化（i18n 暂时没配置所有文件）
+- 🚀 使用 自定义高阶组件 进行路由权限拦截（403 页面）、页面按钮权限配置
+- 🚀 支持 React-Router v6 路由懒加载配置、菜单手风琴模式、无限级菜单、多标签页、面包屑导航
+- 🚀 使用 Prettier 统一格式化代码，集成 Eslint、Stylelint 代码校验规范（项目规范配置）
+- 🚀 使用 husky、lint-staged、commitlint、commitizen、cz-git 规范提交信息（项目规范配置）
 
-### `npm run build`
+### 四、安装使用步骤 📑
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Clone：**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```text
+# Gitee
+git clone https://gitee.com/zylucky/react-admin.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Install：**
 
-### `npm run eject`
+```text
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# npm install 安装失败，请升级 nodejs 到 16 以上，或尝试使用以下命令：
+npm install --registry=https://registry.npm.taobao.org
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Run：**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```text
+npm run start
+npm run serve
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Build：**
 
-## Learn More
+```text
+# 开发环境
+npm run build:dev
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 预生产环境
+npm run build:prod
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 生产环境
+npm run build
+```
 
-### Code Splitting
+### 五、文件资源目录 📚
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+React-Admin
+├─ .vscode                # vscode推荐配置
+├─ public                 # 静态资源文件（忽略打包）
+│  ├─ index.html          # 入口 html
+├─ src
+│  ├─ api                 # API 接口管理
+│  ├─ assets              # 静态资源文件
+│  ├─ components          # 全局组件
+│  ├─ config              # 全局配置项
+│  ├─ enums               # 项目枚举
+│  ├─ hooks               # 常用 Hooks
+│  ├─ layouts             # 框架布局
+│  ├─ routers             # 路由管理
+│  ├─ store               # 状态管理
+│  ├─ styles              # 全局样式
+│  ├─ utils               # 工具库
+│  ├─ views               # 项目所有页面
+│  ├─ App.js              # 入口页面
+│  ├─ main.js             # 入口文件
+├─ .editorconfig          # 编辑器配置（格式化）
+├─ .env                   # 常用配置
+├─ .env.development       # 开发环境配置
+├─ .env.production        # 预生产环境配置
+├─ .eslintignore          # 忽略 Eslint 校验
+├─ .eslintrc.js           # Eslint 校验配置
+├─ .gitignore             # git 提交忽略
+├─ .prettierignore        # 忽略 prettier 格式化
+├─ .prettierrc.js         # prettier 配置
+├─ package-lock.json      # 依赖包包版本锁
+├─ package.json           # 依赖包管理
+├─ README.md              # README 介绍
+└─ craco.config.ts        # 配置
+```
 
-### Analyzing the Bundle Size
+### 六、项目后台接口 🧩
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+项目后台接口完全采用 Mock 数据，感谢以下 Mock 平台支持：
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- FastMock： https://www.fastmock.site/
+- EasyMock：https://mock.mengxuegu.com/
