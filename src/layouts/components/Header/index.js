@@ -4,6 +4,7 @@ import BreadcrumbNav from "./components/BreadcrumbNav";
 import AvatarIcon from "./components/AvatarIcon";
 import Theme from "./components/Theme";
 import Fullscreen from "./components/Fullscreen";
+import AssemblySize from "./components/AssemblySize";
 import "./index.less";
 
 const LayoutHeader = () => {
@@ -15,6 +16,7 @@ const LayoutHeader = () => {
 				<BreadcrumbNav />
 			</div>
 			<div className="header-ri">
+				<AssemblySize />
 				<Theme />
 				<Fullscreen />
 				<span className="username">Hooks</span>

@@ -37,6 +37,9 @@ const global = {
 		},
 		async setThemeConfig({ themeConfig }) {
 			this.setStates({ themeConfig });
+		},
+		async setAssemblySize({ assemblySize }) {
+			this.setStates({ assemblySize });
 		}
 	})
 };

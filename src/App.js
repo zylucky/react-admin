@@ -7,13 +7,14 @@ import "./index.less";
 import useTheme from "@/hooks/useTheme";
 
 function App() {
-	const { themeConfig } = useSelector(state => state.global);
+	const { themeConfig, assemblySize } = useSelector(state => state.global);
 	// 全局使用主题
 	useTheme(themeConfig);
 
 	return (
 		<HashRouter>
 			<ConfigProvider
+				componentSize={assemblySize}
 				theme={{
 					algorithm: themeConfig.isDark ? theme.darkAlgorithm : theme.defaultAlgorithm
 				}}
