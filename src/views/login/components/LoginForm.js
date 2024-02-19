@@ -22,15 +22,11 @@ const LoginForm = () => {
 			const { data } = await loginApi(loginForm);
 			dispatch({
 				type: "global/setToken",
-				payload: {
-					token: data?.access_token
-				}
+				payload: data?.access_token
 			});
 			dispatch({
 				type: "tabs/setTabsList",
-				payload: {
-					tabsList: []
-				}
+				payload: []
 			});
 			message.success("登录成功！");
 			navigate(HOME_URL);

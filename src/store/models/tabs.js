@@ -12,14 +12,18 @@ const global = {
 	reducers: {
 		setStates(state, payload) {
 			return { ...state, ...payload };
+		},
+		// * setTabsList
+		setTabsList(state, payload) {
+			return { ...state, tabsList: payload };
 		}
 	},
 	effects: () => ({
 		// 异步
 		// * setTabsList
-		async setTabsList({ tabsList }) {
-			this.setStates({ tabsList });
-		},
+		// async setTabsList({ tabsList }) {
+		// 	this.setStates({ tabsList });
+		// },
 		// * setTabsActive
 		async setTabsActive({ tabsActive }) {
 			this.setStates({ tabsActive });

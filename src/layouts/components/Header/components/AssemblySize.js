@@ -10,9 +10,7 @@ const AssemblySize = () => {
 	const onClick = e => {
 		dispatch({
 			type: "global/setAssemblySize",
-			payload: {
-				assemblySize: e.key
-			}
+			payload: e.key
 		});
 	};
 

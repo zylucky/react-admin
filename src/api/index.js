@@ -59,9 +59,7 @@ class RequestHttp {
 				if (data.code === ResultEnum.OVERDUE) {
 					store.dispatch({
 						type: "global/setToken",
-						payload: {
-							token: ""
-						}
+						payload: ""
 					});
 					message.error(data.msg);
 					window.location.hash = "/login";

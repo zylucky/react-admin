@@ -71,23 +71,17 @@ const LayoutMenu = () => {
 			// 存储处理过后的所有面包屑导航栏到 redux 中
 			dispatch({
 				type: "breadcrumb/setBreadcrumbList",
-				payload: {
-					breadcrumbList: findAllBreadcrumb(data)
-				}
+				payload: findAllBreadcrumb(data)
 			});
 			// 把路由菜单处理成一维数组，存储到 redux 中，做菜单权限判断
 			const dynamicRouter = handleRouter(data);
 			dispatch({
 				type: "auth/setAuthRouter",
-				payload: {
-					authRouter: dynamicRouter
-				}
+				payload: dynamicRouter
 			});
 			dispatch({
 				type: "menu/setMenuListAction",
-				payload: {
-					menuList: data
-				}
+				payload: data
 			});
 		} finally {
 			setLoading(false);

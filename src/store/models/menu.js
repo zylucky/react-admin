@@ -12,21 +12,21 @@ const menu = {
 	reducers: {
 		setStates(state, payload) {
 			return { ...state, ...payload };
+		},
+		// * setMenuListAction
+		setMenuListAction(state, payload) {
+			return { ...state, menuList: payload };
+		},
+		// * updateCollapse
+		updateCollapse(state, payload) {
+			return { ...state, isCollapse: payload };
 		}
 	},
 	effects: () => ({
-		// 异步
-		// * setMenuListAction
-		async setMenuListAction({ menuList }) {
-			this.setStates({ menuList });
-		},
+		// 异步（示例）
 		async getMenuListAction() {
 			const { data = [] } = await getMenuList();
-			this.setStates({ menuList: data });
-		},
-		// * updateCollapse
-		async updateCollapse({ isCollapse }) {
-			this.setStates({ isCollapse });
+			this.setMenuListAction({ menuList: data });
 		}
 	})
 };

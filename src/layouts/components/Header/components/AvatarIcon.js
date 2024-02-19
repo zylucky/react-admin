@@ -21,9 +21,7 @@ const AvatarIcon = () => {
 			onOk: () => {
 				dispatch({
 					type: "global/setToken",
-					payload: {
-						token: ""
-					}
+					payload: ""
 				});
 				message.success("退出登录成功！");
 				navigate("/login");

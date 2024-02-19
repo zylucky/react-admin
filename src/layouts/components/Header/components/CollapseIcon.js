@@ -8,9 +8,7 @@ const CollapseIcon = () => {
 	const updateCollapse = () => {
 		dispatch({
 			type: "menu/updateCollapse",
-			payload: {
-				isCollapse: !isCollapse
-			}
+			payload: !isCollapse
 		});
 	};
 

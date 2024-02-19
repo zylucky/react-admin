@@ -24,18 +24,14 @@ const LayoutIndex = () => {
 		// 设置按钮权限
 		dispatch({
 			type: "auth/setAuthButtons",
-			payload: {
-				authButtons: data
-			}
+			payload: data
 		});
 	};
 
 	const updateCollapse = e => {
 		dispatch({
 			type: "menu/updateCollapse",
-			payload: {
-				isCollapse: e
-			}
+			payload: e
 		});
 	};
 

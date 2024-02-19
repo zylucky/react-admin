@@ -9,11 +9,9 @@ const SwitchDark = () => {
 		dispatch({
 			type: "global/setThemeConfig",
 			payload: {
-				themeConfig: {
-					...themeConfig,
-					isDark: checked,
-					prefixCls: checked ? THEME_NAME.THEME_DARK : THEME_NAME.THEME_DEFAULT
-				}
+				...themeConfig,
+				isDark: checked,
+				prefixCls: checked ? THEME_NAME.THEME_DARK : THEME_NAME.THEME_DEFAULT
 			}
 		});
 	};

@@ -17,19 +17,15 @@ const Theme = () => {
 			return dispatch({
 				type: "global/setThemeConfig",
 				payload: {
-					themeConfig: {
-						...themeConfig,
-						weakOrGray: theme
-					}
+					...themeConfig,
+					weakOrGray: theme
 				}
 			});
 		dispatch({
 			type: "global/setThemeConfig",
 			payload: {
-				themeConfig: {
-					...themeConfig,
-					weakOrGray: ""
-				}
+				...themeConfig,
+				weakOrGray: ""
 			}
 		});
 	};
@@ -38,10 +34,8 @@ const Theme = () => {
 		return dispatch({
 			type: "global/setThemeConfig",
 			payload: {
-				themeConfig: {
-					...themeConfig,
-					[keyName]: !checked
-				}
+				...themeConfig,
+				[keyName]: !checked
 			}
 		});
 	};
@@ -49,9 +43,7 @@ const Theme = () => {
 	const updateCollapse = e => {
 		dispatch({
 			type: "menu/updateCollapse",
-			payload: {
-				isCollapse: e
-			}
+			payload: e
 		});
 	};
 

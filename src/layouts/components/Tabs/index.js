@@ -26,9 +26,7 @@ const LayoutTabs = () => {
 	const setTabsList = list => {
 		dispatch({
 			type: "tabs/setTabsList",
-			payload: {
-				tabsList: list
-			}
+			payload: list
 		});
 	};
 

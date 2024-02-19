@@ -9,14 +9,14 @@ const breadcrumb = {
 	reducers: {
 		setStates(state, payload) {
 			return { ...state, ...payload };
+		},
+		// * setBreadcrumbList
+		setBreadcrumbList(state, payload) {
+			return { ...state, breadcrumbList: payload };
 		}
 	},
 	effects: () => ({
 		// 异步
-		// * setBreadcrumbList
-		async setBreadcrumbList({ breadcrumbList }) {
-			this.setStates({ breadcrumbList });
-		}
 	})
 };
 

@@ -28,19 +28,22 @@ const global = {
 	reducers: {
 		setStates(state, payload) {
 			return { ...state, ...payload };
+		},
+		// * setToken
+		setToken(state, payload) {
+			return { ...state, token: payload };
+		},
+		// * setAssemblySize
+		setAssemblySize(state, payload) {
+			return { ...state, assemblySize: payload };
+		},
+		// * setThemeConfig
+		setThemeConfig(state, payload) {
+			return { ...state, themeConfig: payload };
 		}
 	},
 	effects: () => ({
 		// 异步
-		async setToken({ token }) {
-			this.setStates({ token });
-		},
-		async setThemeConfig({ themeConfig }) {
-			this.setStates({ themeConfig });
-		},
-		async setAssemblySize({ assemblySize }) {
-			this.setStates({ assemblySize });
-		}
 	})
 };
 
