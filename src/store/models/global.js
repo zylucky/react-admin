@@ -40,6 +40,10 @@ const global = {
 		// * setThemeConfig
 		setThemeConfig(state, payload) {
 			return { ...state, themeConfig: payload };
+		},
+		// * setLanguage
+		setLanguage(state, payload) {
+			return { ...state, language: payload };
 		}
 	},
 	effects: () => ({
