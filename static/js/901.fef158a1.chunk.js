@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_admin=self.webpackChunkreact_admin||[]).push([[901],{3901:function(e,n,a){a.r(n);var c=a(6223);n.default=function(){return(0,c.jsx)("div",{className:"card content-box",children:(0,c.jsx)("span",{className:"text",children:"Menu2-2-2"})})}}}]);
+//# sourceMappingURL=901.fef158a1.chunk.js.map
