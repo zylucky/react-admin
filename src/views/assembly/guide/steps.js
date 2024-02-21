@@ -24,7 +24,7 @@ const steps = [
 		}
 	},
 	{
-		element: ".anticon-pic-right",
+		element: ".icon-contentright",
 		popover: {
 			title: "Switch Assembly Size",
 			description: "Switch the system size",
@@ -32,7 +32,7 @@ const steps = [
 		}
 	},
 	{
-		element: ".anticon-translation",
+		element: ".icon-zhongyingwen",
 		popover: {
 			title: "Switch Language",
 			description: "Switch the system language",
@@ -40,7 +40,7 @@ const steps = [
 		}
 	},
 	{
-		element: ".anticon-skin",
+		element: ".icon-zhuti",
 		popover: {
 			title: "Setting Layout",
 			description: "Customize settings layout",
@@ -48,7 +48,7 @@ const steps = [
 		}
 	},
 	{
-		element: ".anticon-expand",
+		element: ".icon-fangda",
 		popover: {
 			title: "Full Screen",
 			description: "Full Screen, Exit The Full Screen Page",

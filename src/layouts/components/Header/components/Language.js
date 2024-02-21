@@ -1,5 +1,4 @@
 import { Dropdown, Menu } from "antd";
-import { TranslationOutlined } from "@ant-design/icons";
 import { useSelector, useDispatch } from "react-redux";
 
 const Language = () => {
@@ -33,7 +32,7 @@ const Language = () => {
 	);
 	return (
 		<Dropdown dropdownRender={menu} placement="bottom" trigger={["click"]} arrow={true}>
-			<TranslationOutlined className="icon-style" />
+			<i className="icon-style iconfont icon-zhongyingwen"></i>
 		</Dropdown>
 	);
 };

@@ -3,6 +3,8 @@
  * @blog: https://zylucky.github.io
  */
 import ReactDOM from "react-dom/client";
+import "@/language/index";
+import "@/assets/iconfont/iconfont.less";
 // 全局配置初始化 css 文件
 import "reset-css";
 import "@/styles/common.less";

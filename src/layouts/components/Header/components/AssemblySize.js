@@ -1,5 +1,4 @@
 import { Dropdown, Menu } from "antd";
-import { PicRightOutlined } from "@ant-design/icons";
 import { useSelector, useDispatch } from "react-redux";
 
 const AssemblySize = () => {
@@ -40,7 +39,7 @@ const AssemblySize = () => {
 	);
 	return (
 		<Dropdown dropdownRender={menu} placement="bottom" trigger={["click"]} arrow={true}>
-			<PicRightOutlined className="icon-style" />
+			<i className="icon-style iconfont icon-contentright"></i>
 		</Dropdown>
 	);
 };

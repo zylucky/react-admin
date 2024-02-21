@@ -1,6 +1,5 @@
 import screenfull from "screenfull";
 import { App, Popover } from "antd";
-import { ExpandOutlined, CompressOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 
 const Fullscreen = () => {
@@ -23,11 +22,12 @@ const Fullscreen = () => {
 	const content = fullScreen ? "正常" : "全屏";
 
 	return (
-		<i className="icon-style" onClick={handleFullScreen}>
-			<Popover content={content} trigger="hover">
-				{fullScreen ? <CompressOutlined /> : <ExpandOutlined />}
-			</Popover>
-		</i>
+		<Popover content={content} trigger="hover">
+			<i
+				className={["icon-style iconfont", fullScreen ? "icon-suoxiao" : "icon-fangda"].join(" ")}
+				onClick={handleFullScreen}
+			></i>
+		</Popover>
 	);
 };
 

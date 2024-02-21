@@ -1,5 +1,4 @@
 import { Drawer, Divider, Switch } from "antd";
-import { SkinOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FireOutlined, SettingOutlined } from "@ant-design/icons";
@@ -50,13 +49,11 @@ const Theme = () => {
 	return (
 		<>
 			<i
-				className="icon-style"
+				className="icon-style iconfont icon-zhuti"
 				onClick={() => {
 					setVisible(true);
 				}}
-			>
-				<SkinOutlined />
-			</i>
+			></i>
 			<Drawer
 				title="布局设置"
 				closable={false}
