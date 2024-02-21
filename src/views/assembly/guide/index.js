@@ -17,7 +17,6 @@ const Guide = () => {
 
 	const guide = () => {
 		driverObj.drive();
-		console.log(driverObj, "driverObj");
 	};
 	return (
 		<div className="card content-box">
