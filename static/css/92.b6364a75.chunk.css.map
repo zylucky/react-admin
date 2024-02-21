@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/92.b6364a75.chunk.css","mappings":"AAAA,UAGE,iBAAkB,CADlB,YAAa,CAEb,eAAgB,CAHhB,WAIF","sources":["components/IconSvg/style.less"],"sourcesContent":[".icon-svg {\n  width: 1.5em;\n  height: 1.5em;\n  fill: currentColor;\n  overflow: hidden;\n}\n@primary-color: #1890ff;"],"names":[],"sourceRoot":""}

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_admin=self.webpackChunkreact_admin||[]).push([[533],{3533:function(e,t,r){r.r(t);var a=r(6223);t.default=function(){return(0,a.jsx)("div",{className:"card content-box",children:(0,a.jsxs)("span",{className:"text",children:["MyBlog \uff1a",(0,a.jsx)("a",{href:"https://zylucky.github.io",target:"_blank",rel:"noreferrer",children:"https://zylucky.github.io"})," ","\ud83c\udf52\ud83c\udf49\ud83c\udf4a"]})})}}}]);
+//# sourceMappingURL=533.a16b915a.chunk.js.map

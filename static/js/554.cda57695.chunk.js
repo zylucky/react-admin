@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_admin=self.webpackChunkreact_admin||[]).push([[554],{1554:function(e,t,a){a.r(t);var c=a(6223);t.default=function(){return(0,c.jsx)("div",{className:"card content-box",children:(0,c.jsxs)("span",{className:"text",children:["Gitee \u4ed3\u5e93\uff1a",(0,c.jsx)("a",{href:"https://gitee.com/zylucky/react-admin",target:"_blank",rel:"noreferrer",children:"https://gitee.com/zylucky/react-admin"})," ","\ud83c\udf52\ud83c\udf49\ud83c\udf4a"]})})}}}]);
+//# sourceMappingURL=554.cda57695.chunk.js.map
