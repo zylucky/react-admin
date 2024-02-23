@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./style.less";
+import "@/assets/svg/index";
 
 const IconSvg = React.memo(({ width, height, name, className }) => {
 	return (
