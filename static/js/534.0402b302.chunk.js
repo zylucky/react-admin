@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_admin=self.webpackChunkreact_admin||[]).push([[534],{5826:function(e,n,a){a.r(n);var s=a(9439),t=a(3094),c=a(561),r=a(2583),i=a(6223);n.default=function(){var e=(0,r.useState)(c.d()||[]),n=(0,s.Z)(e,1)[0];return(0,i.jsx)("div",{className:"card content-box",children:(0,i.jsxs)("div",{className:"svg-list",children:["UseComponent \xa0",n.map((function(e,n){return(0,i.jsx)(t.Z,{name:e},n)}))]})})}}}]);
+//# sourceMappingURL=534.0402b302.chunk.js.map
