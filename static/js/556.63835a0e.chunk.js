@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_admin=self.webpackChunkreact_admin||[]).push([[556],{9556:function(e,a,r){r.r(a),r.d(a,{default:function(){return c}});var n=r(6223),c=function(){return(0,n.jsx)("iframe",{src:"https://www.yuxin-ai.com/chat/new?id=klEJl-TsU8Vkui9_ebLSk",frameBorder:"0",className:"card full-iframe"})}}}]);
+//# sourceMappingURL=556.63835a0e.chunk.js.map
